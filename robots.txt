@@ -1,4 +1,3 @@
 User-agent: *
 
 Disallow: /hacker.txt
-Disallow: /_redirects
