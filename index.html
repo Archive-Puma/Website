@@ -1,59 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MrRobot: Comming Soon</title>
-    <link rel="stylesheet" href="public/css/mrrobot.css">
+  <title>fsundays</title>
+  <!-- Important info -->
+  <meta name="author" content="Kike Fontan">
+  <meta name="description" content="Personal Website - Kike Fontan (@CosasDePuma)">
+  <meta name="keywords" content="FSundays, Hackspace, Hackerspace, MrRobot, Hacking">
+  <!-- Website cofiguration -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Import css stylesheets and fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+
+  /* Create Animation */
+  .enter-animation span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .enter-animation span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .enter-animation:hover span {
+    padding-right: 25px;
+  }
+  .enter-animation:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  /* Background */
+  .bgimg {
+      background-image: url('public/img/mainbackground.jpg') ;
+      min-height: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  /* Animation Settings */
+  .slow-speed{
+  	animation-duration: 2s;
+  }
+  /* More HTML Style Configuration */
+  body,h1 {font-family: "Arial", sans-serif}
+  body, html {background-color: #17181A; height: 100%}
+  </style>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- Background image -->
     <div class="fullscreen">
       <img class="background fullscreen filter" src="public/img/fsociety.jpg" />
+=======
+  <!-- Background container -->
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <!-- Author button -->
+    <a id="author-link" href="https://github.com/CosasDePuma" class="w3-button w3-display-bottomright enter-animation">
+      <span>GitHub</span>
+    </a>
+    <!-- Main text -->
+    <div class="w3-display-middle">
+      <h1 id="textt" class="w3-jumbo w3-animate-zoom slow-speed">COMING SOON</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Cosas de Puma</p>
+>>>>>>> 83758edeba8f782545450da75b8d0e613a9ddf82
     </div>
-    <!-- Title -->
-    <div class="title filter">mrrobot</div>
-    <div class="subtitle filter">comming soon...</div>
-
-    <!-- Glitch effect -->
-    <svg>
-        <filter id="glitch">
-            <!-- Red Green Blue -->
-            <feColorMatrix in="SourceGraphic" type="matrix" result="red"
-                values="1   0   0   0   0
-                        0   0   0   0   0
-                        0   0   0   0   0
-                        0   0   0   1   0"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" result="green"
-                values="0   0   0   0   0
-                        0   1   0   0   0
-                        0   0   0   0   0
-                        0   0   0   1   0"/>
-            <feColorMatrix in="SourceGraphic" type="matrix" result="blue"
-                values="0   0   0   0   0
-                        0   0   0   0   0
-                        0   0   1   0   0
-                        0   0   0   1   0"/>
-            <!-- Glitched Red -->
-            <feOffset in="red" result="red" dx="-15">
-                <animate attributeName="dx" attributeType="XML" values="0; -3; 1; 0; 2; -1; 0;" dur="2s" repeatCount="indefinite"/>
-            </feOffset>
-            <!-- Glitched Green -->
-            <feOffset in="green" result="green" dx="-10">
-                <animate attributeName="dx" attributeType="XML" values="0; 2; -1; 1; 0; 1; 0;" dur="2.5s" repeatCount="indefinite"/>
-            </feOffset>
-            <!-- Glitched Blue -->
-            <feOffset in="blue" result="blue" dx="-5">
-                <animate attributeName="dx" attributeType="XML" values="0; 1; 2; -4; 2; 6; 0;" dur="2s" repeatCount="indefinite"/>
-            </feOffset>
-            <!-- Glitched -->
-            <feBlend in="red" in2="green" mode="screen" result="blend" />
-            <feBlend in="blend" in2="blue" mode="screen" result="blend" />
-            <feGaussianBlur in="blend" stdDeviation="1">
-                <animate attributeName="stdDeviation" attributeType="XML" values="0; 2; 1; 0.3; 2; 1; 0.5 ;3; 0" dur="5s" repeatCount="indefinite"/>
-            </feGaussianBlur>
-        </filter>
-    </svg>
+  </div>
 </body>
 </html>
