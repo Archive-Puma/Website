@@ -1,3 +1,2 @@
 # Redirections
-/index.html       / 200!
 /resources        https://www.github.com/cosasdepuma/hack-their-x 301!
